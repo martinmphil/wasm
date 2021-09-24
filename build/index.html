@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="app.css" />
+  <title>Us-vs-Them</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Us-vs-Them probabilities" />
+  <body>
+    <noscript>Please enable JavaScript to run this app.</noscript>
+    <header>
+      <hgroup>
+        <h1>Chances of success</h1>
+        <h2>​Us versus Them</h2>
+      </hgroup>
+    </header>
+
+    <main>
+      <div class="resetButtonContainer">
+        <button id="resetBttn" type="button" aria-label="reset app">
+          Reset
+        </button>
+      </div>
+
+      <form class="bothUsAndThemForm">
+        <fieldset class="usFieldset">
+          <section class="usOrThemInputs">
+            <h3>Us</h3>
+            <input
+              type="number"
+              name="usInput"
+              id="usInput"
+              min="0"
+              value="10"
+            />
+            <button id="minus1Us" type="button" aria-label="minus one from us">
+              -
+            </button>
+            <button id="plus1Us" type="button" aria-label="add one to us">
+              +
+            </button>
+          </section>
+
+          <section class="bothAdvantageInputSections advantageUsSection">
+            <h4>Advantages</h4>
+            <button
+              id="minus1AdvUs"
+              type="button"
+              aria-label="minus one advantage from us"
+            >
+              -
+            </button>
+            <input type="number" name="advUsInput" id="advUsInput" value="0" />
+            <button
+              id="plus1AdvUs"
+              type="button"
+              aria-label="add one advantage to us"
+            >
+              +
+            </button>
+          </section>
+        </fieldset>
+
+        <fieldset class="themFieldset">
+          <section class="usOrThemInputs">
+            <h3>Them</h3>
+            <input
+              type="number"
+              name="themInput"
+              id="themInput"
+              min="0"
+              value="10"
+            />
+            <button
+              id="minus1Them"
+              type="button"
+              aria-label="minus one from them"
+            >
+              -
+            </button>
+            <button id="plus1Them" type="button" aria-label="add one to them">
+              +
+            </button>
+          </section>
+
+          <section class="bothAdvantageInputSections advantageThemSection">
+            <h4>Advantages</h4>
+            <button
+              id="minus1AdvThem"
+              type="button"
+              aria-label="minus one advantage from them"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              name="advThemInput"
+              id="advThemInput"
+              value="0"
+            />
+            <button
+              id="plus1AdvThem"
+              type="button"
+              aria-label="add one advantage to them"
+            >
+              +
+            </button>
+          </section>
+        </fieldset>
+      </form>
+
+      <section class="output-section">
+        <h3>Probability</h3>
+        <output name="edict" for="usInput, themInput, advUs, advThem"></output>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
