@@ -3,6 +3,13 @@ async function main() {
     fetch("optimized.wasm")
   ).then((obj) => obj.instance.exports.versus);
 
+  // To avoid "unsupported MIME type error" use array buffer:-
+  //
+  // const wasmResponse = await fetch("optimized.wasm");
+  // const wasmBuffer = await wasmResponse.arrayBuffer();
+  // const wasmObject = await WebAssembly.instantiate(wasmBuffer);
+  // const prob = wasmObject.instance.exports.versus;
+
   const state = new Map();
 
   function instruct() {
